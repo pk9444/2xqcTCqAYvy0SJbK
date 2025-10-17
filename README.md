@@ -50,4 +50,9 @@ For this project, we will be leveraging the following two datasets:
 | **Spectrogram (Mel Bands)** | Richer harmonic structure and smoother formant transitions. | Slightly blurred or smeared harmonics, with less detailed formant definition. |
 | **Overall Naturalness** | Appears authentic, with organic timing and spectral variation. | Sounds more synthetic - consistent energy and less variability in texture. |
 
+<img width="1670" height="818" alt="Apziva_p5_Phase2_CommonVoice_GroundTruth" src="https://github.com/user-attachments/assets/9d58a113-7e4f-41a7-a74e-69059109a54b" />
+
+- The ground truth audio sample, i.e. CommonVoice exhibits a waveform pattern that somewhat matches the waveforms of both the TIMIT real and fake audio samples. 
+- The same behavior can also be noticed in its frequency variation over time in the spectrogram - it has ridges similar to the fake, but energy levels matching closer with the real.
+- This actually a good sign as it denotes that the VCS has created clones very similar to the ground truth, and hence, the model would be robust to detect a deepfake audio at greater granularity.  
 
