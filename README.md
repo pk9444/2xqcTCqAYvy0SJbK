@@ -24,6 +24,10 @@ For this project, we will be leveraging the following two datasets:
 
 - CommonVoice dataset - corpus of speech data read by users on the Common Voice website (https://commonvoice.mozilla.org/), and based upon text from a number of public domain sources like user submitted blog posts, old books, movies, and other public speech corpora. Its primary purpose is to enable the training and testing of automatic speech recognition (ASR) systems. Link - [https://commonvoice.mozilla.org/en/datasets]
 
+### METHODOLOGY
+
+<img width="806" height="325" alt="Apziva_p5_Phase1 drawio" src="https://github.com/user-attachments/assets/d85c8094-daa2-42e0-832b-5831e87e793b" />
+
 
 ## PHASE 2 - FAKE AUDIO DETECTION (FAD)
 
