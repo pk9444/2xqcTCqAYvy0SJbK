@@ -29,8 +29,25 @@ For this project, we will be leveraging the following two datasets:
 <img width="806" height="325" alt="Apziva_p5_Phase1 drawio" src="https://github.com/user-attachments/assets/d85c8094-daa2-42e0-832b-5831e87e793b" />
 
 
-## PHASE 2 - FAKE AUDIO DETECTION (FAD)
+## PHASE 2 - SIGNAL PROCESSING AND DATASET CONSOLIDATION
 
 ### OBJECTIVE
 
-- To develop a FAD (Fake Audio Detection) using a ground truth CommonVoice audio dataset, consolidate it with the extracted and labelled TIMIT audio samples, and build a ML model that detects whether an audio is fake or real.
+- Consolidate the CommonVoice audio dataset as the ground truth along with TIMIT samples from the VCS, apply signal transformations, analyze waveforms and frequency variations and save the meta data for building FAD (Fake Audio Detection) model.
+
+### METHOLDOGY
+
+<img width="828" height="486" alt="Apziva_p5_Phase2 drawio" src="https://github.com/user-attachments/assets/7b4711e7-a628-46e7-846a-bdcab561f505" />
+
+### OBSERVATIONS
+
+<img width="1654" height="922" alt="Apziva_p5_Phase2_Fake_Vs_Real_Comparison" src="https://github.com/user-attachments/assets/4cb418a9-91d8-4572-9b32-cf0648f1d600" />
+
+| **Aspect** | **Real Audio** | **Fake Audio** |
+|-------------|----------------|----------------|
+| **Amplitude Pattern (Waveform)** | More natural amplitude variation with smoother transitions between speech segments. | Higher amplitude peaks and more uniform energy variations - evidence of external smoothening. |
+| **Temporal Structure** | Clear silence gaps and distinct phoneme boundaries, typical of natural speech. | Less silence between segments; transitions appear more abrupt or evenly spaced. |
+| **Spectrogram (Mel Bands)** | Richer harmonic structure and smoother formant transitions. | Slightly blurred or smeared harmonics, with less detailed formant definition. |
+| **Overall Naturalness** | Appears authentic, with organic timing and spectral variation. | Sounds more synthetic - consistent energy and less variability in texture. |
+
+
