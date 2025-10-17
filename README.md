@@ -22,4 +22,11 @@ For this project, we will be leveraging the following two datasets:
 
 - TIMIT dataset - contains speech data for acoustic-phonetic studies and for the development and evaluation of automatic speech recognition systems. TIMIT contains a total of 6300 sentences, 10 sentences spoken by each of 630 speakers from 8 major dialect regions of the United States. Our VCS will create 5 clones per speaker id.
 
-- CommonVoice dataset - corpus of speech data read by users on the Common Voice website (https://commonvoice.mozilla.org/), and based upon text from a number of public domain sources like user submitted blog posts, old books, movies, and other public speech corpora. Its primary purpose is to enable the training and testing of automatic speech recognition (ASR) systems. Link - [https://commonvoice.mozilla.org/en/datasets] 
+- CommonVoice dataset - corpus of speech data read by users on the Common Voice website (https://commonvoice.mozilla.org/), and based upon text from a number of public domain sources like user submitted blog posts, old books, movies, and other public speech corpora. Its primary purpose is to enable the training and testing of automatic speech recognition (ASR) systems. Link - [https://commonvoice.mozilla.org/en/datasets]
+
+
+## PHASE 2 - FAKE AUDIO DETECTION (FAD)
+
+### OBJECTIVE
+
+- To develop a FAD (Fake Audio Detection) using a ground truth CommonVoice audio dataset, consolidate it with the extracted and labelled TIMIT audio samples, and build a ML model that detects whether an audio is fake or real.
