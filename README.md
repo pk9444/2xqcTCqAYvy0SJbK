@@ -68,11 +68,18 @@ For this project, we will be leveraging the following two datasets:
 
 ### PERFORMANCE EVALUATION
 
-#### CNN MODEL REPORT
+#### CLASSIFICATION REPORT
 
 <img width="500" height="400" alt="confmat_train" src="https://github.com/user-attachments/assets/bfffc9d7-3a48-47cc-bee2-16fcc58398b8" />
 <img width="500" height="400" alt="confmat_val" src="https://github.com/user-attachments/assets/af460288-65b0-4598-b758-14150dfda105" />
 <img width="500" height="400" alt="confmat_test" src="https://github.com/user-attachments/assets/738ab410-1a11-4766-ae3d-eb82c317facf" />
+
+
+- The model achieves perfect or near-perfect precision, recall, and F-1 on train, validation, and test sets, suggesting extremely strong internal learning and separation between real and fake speech features.
+- Validation and test performance mirrors training accuracy (≈1.00), indicating the model generalizes well within the distribution of TIMIT and CommonVoice samples used in training.
+- Both "Real" and "Fake" classes achieve identical precision/recall values, showing that the model does not exhibit bias toward the majority (real) class despite the 8:3 dataset imbalance.
+- The F-1 score of 1.000 confirms that the model maintains a decent balance between false positives and false negatives—critical for fake-audio detection tasks where misclassification cost is high.
+- The limitation is that we have our own VCS that fakes a audio samples in a designated way, and the scope is limited to only CommonVoice and TIMIT datasets; so a more diversified, global dataset would have been even more beneifical for training the CNN.  
 
 #### WER ANALYSIS
 
