@@ -78,6 +78,9 @@ For this project, we will be leveraging the following two datasets:
 
 <img width="2400" height="1500" alt="wer_distribution" src="https://github.com/user-attachments/assets/d768a3b2-51b8-4dca-9bda-29f253ef9b5e" />
 
-
+- On average, the cloned (fake) versions of the same utterances differ from their real counterparts by about 48 % of the words — indicating moderate distortion in intelligibility or phonetic clarity introduced by the VCS.
+- The histogram shows most samples have WER between 0.3 and 0.6, meaning many fakes retain recognizable speech but still exhibit consistent articulation or timing mismatches detectable by ASR.
+- A smaller subset exceeds WER > 1.0, corresponding to highly degraded or unnatural synthetic speech, likely where the vocoder or prosody modeling failed.
+- This moderate-to-high WER range aligns with the CNN learning to flag as "fake". The model likely exploits the same degradation patterns that inflate WER — thus the two metrics reinforce one another as independent validation signals.
 
 
