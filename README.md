@@ -56,3 +56,6 @@ For this project, we will be leveraging the following two datasets:
 - The same behavior can also be noticed in its frequency variation over time in the spectrogram - it has ridges similar to the fake, but energy levels matching closer with the real.
 - This actually a good sign as it denotes that the VCS has created clones very similar to the ground truth, and hence, the model would be robust to detect a deepfake audio at greater granularity.  
 
+## PHASE 3 - FAKE AUDIO DETECTION MECHANISM
+
+<img width="822" height="562" alt="Apziva_p5_Phase3_FAD_Methodology" src="https://github.com/user-attachments/assets/e138c7fc-9e27-4a15-aed2-6b84d706b3d7" />
