@@ -58,4 +58,26 @@ For this project, we will be leveraging the following two datasets:
 
 ## PHASE 3 - FAKE AUDIO DETECTION MECHANISM
 
+### OBJECTIVE
+
+- Train a Convoluted Neural Network (CNN) that reads the consolidated (ground truth + real + fake) dataset, extract mel spectrograms as features, build the model, and compile the success metrics - F-1 Score, Classification Report, Word Error Rate (WER) and Speaker Classification Accuracy.
+
+### METHODOLOGY
+
 <img width="822" height="562" alt="Apziva_p5_Phase3_FAD_Methodology" src="https://github.com/user-attachments/assets/e138c7fc-9e27-4a15-aed2-6b84d706b3d7" />
+
+### PERFORMANCE EVALUATION
+
+#### CNN MODEL REPORT
+
+<img width="500" height="400" alt="confmat_train" src="https://github.com/user-attachments/assets/bfffc9d7-3a48-47cc-bee2-16fcc58398b8" />
+<img width="500" height="400" alt="confmat_val" src="https://github.com/user-attachments/assets/af460288-65b0-4598-b758-14150dfda105" />
+<img width="500" height="400" alt="confmat_test" src="https://github.com/user-attachments/assets/738ab410-1a11-4766-ae3d-eb82c317facf" />
+
+#### WER ANALYSIS
+
+<img width="2400" height="1500" alt="wer_distribution" src="https://github.com/user-attachments/assets/d768a3b2-51b8-4dca-9bda-29f253ef9b5e" />
+
+
+
+
