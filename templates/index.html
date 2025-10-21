@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Audio Detection</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎙️ Fake Audio Detector </h1>
+
+    <form action="/predict" enctype="multipart/form-data" method="post">
+      <input type="file" name="file" accept="audio/*" required>
+      <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+    <div class="output">
+      <h3>{{ result.filename }}</h3>
+      <p><strong>Prediction:</strong> {{ result.label }} ({{ result.prob }})</p>
+
+      
+      <div id="waveformPlot" style="width:600px;height:200px;"></div>
+      
+      <div id="melPlot" style="width:600px;height:400px;"></div>
+
+       <!-- Smart explanation -->
+          <div class="summary-box">
+            <h4>💡Smart Explanation</h4>
+            <p>{{ result.explanation }}</p>
+          </div>
+      <script>
+        // ---------- Waveform Plot ----------
+        const waveform = JSON.parse(`{{ result.waveform | tojson | safe }}`);
+        const waveformTrace = {
+          y: waveform,
+          type: 'scatter',
+          mode: 'lines',
+          line: { color: '#FF8C00', width: 1.2 },
+          fill: 'tozeroy'
+        };
+        const waveformLayout = {
+          // title: 'Waveform',
+          paper_bgcolor: '#1e1e1e',
+          plot_bgcolor: '#1e1e1e',
+          font: { color: '#ffffff', family: "'Inter', sans-serif", size:"12" },
+          xaxis: { title: 'Time' },
+          yaxis: { title: 'Amplitude' },
+          margin: { t: 40, l: 50, r: 20, b: 40 }
+        };
+        Plotly.newPlot('waveformPlot', [waveformTrace], waveformLayout);
+
+        // ---------- Mel Spectrogram Plot ----------
+        const melData = JSON.parse(`{{ result.mel_data | tojson | safe }}`);
+        const trace = {
+          z: melData,
+          type: 'heatmap',
+          colorscale: 'Magma',
+          showscale: true
+        };
+        const layout = {
+          // title: '{{ result.label }} ({{ result.prob }})',
+          xaxis: { title: 'Frames' },
+          yaxis: { title: 'Mel Bands' },
+          paper_bgcolor: '#1e1e1e',
+          plot_bgcolor: '#1e1e1e',
+          font: { color: '#ffffff', family: "'Inter', sans-serif", size:"12" },
+          margin: { t: 50, l: 60, r: 40, b: 60 }
+        };
+        Plotly.newPlot('melPlot', [trace], layout);
+      </script>
+    </div>
+    {% endif %}
+  </div>
+
+  
+</body>
+</html>  
+
+ 
+
+
