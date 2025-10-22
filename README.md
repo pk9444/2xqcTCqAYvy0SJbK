@@ -91,3 +91,6 @@ For this project, we will be leveraging the following two datasets:
 - This moderate-to-high WER range aligns with the CNN learning to flag as "fake". The model likely exploits the same degradation patterns that inflate WER — thus the two metrics reinforce one another as independent validation signals.
 
 
+## PHASE 4 - DEPLOYMENT TO PRODUCTION
+
+<img width="828" height="486" alt="Apziva_p5_Phase4 drawio" src="https://github.com/user-attachments/assets/f76e8c26-9e7a-4566-b27b-85fa0be90dcd" />
