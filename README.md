@@ -94,3 +94,20 @@ For this project, we will be leveraging the following two datasets:
 ## PHASE 4 - DEPLOYMENT TO PRODUCTION
 
 <img width="828" height="486" alt="Apziva_p5_Phase4 drawio" src="https://github.com/user-attachments/assets/f76e8c26-9e7a-4566-b27b-85fa0be90dcd" />
+
+### TECHNOLOGY STACK
+
+- Python >= 3.11.0
+- HTML5
+- CSS
+- Plotly.js
+- JupyterLab
+- NGINX >= 1.28.0
+
+### END-TO-END SOLUTION DEMO
+
+https://github.com/user-attachments/assets/36c4091e-a032-4e2d-82c6-1b18532fcb57
+
+
+
+
