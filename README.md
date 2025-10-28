@@ -1,5 +1,7 @@
 # VOICE CLONING AND FAKE AUDIO DETECTION 
 
+YouTube Video Presentation - https://www.youtube.com/watch?v=RAfuJb4cujo
+
 ## PHASE 1 - VOICE CLONING SYSTEM (VCS)
 
 ### CONTEXT 
